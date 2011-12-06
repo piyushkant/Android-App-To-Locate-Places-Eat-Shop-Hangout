@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/back_repeat">
+
+	<RelativeLayout android:id="@+id/header"
+		android:orientation="horizontal" android:layout_width="match_parent"
+		android:layout_height="wrap_content" style="@style/ButtonText">
+
+
+		<ImageView android:id="@+id/imageview2" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:src="@drawable/logo" />
+	
+		<ImageButton android:id="@+id/mobile_home_header"
+			android:layout_marginTop="2dp" android:padding="13dp"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/mobile_home_header"
+			android:layout_alignParentRight="true" android:soundEffectsEnabled="true"
+			android:onClick="startHome" />
+
+	</RelativeLayout>
+	
+	 <TextView android:layout_width="fill_parent" android:id="@+id/text1"
+		android:layout_height="wrap_content" android:gravity="center"
+		android:textStyle="bold" android:textColor="#000000" android:textSize="16sp"
+		android:text="" android:layout_below="@id/header"
+		android:layout_marginTop="25px" android:layout_marginBottom="20px" />
+
+	<ImageButton android:id="@+id/mobile_refresh_button" style="@style/ButtonText"
+		android:layout_marginBottom="4dp" android:padding="13dp"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:src="@drawable/mobile_refresh_button" android:layout_below="@id/header"
+		android:layout_alignParentRight="true" android:soundEffectsEnabled="true"
+		android:onClick="refresh" android:visibility="invisible" />
+
+	<ScrollView android:id="@+id/listview2"
+		android:layout_below="@id/header" android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+
+		<LinearLayout android:layout_width="match_parent"
+			android:layout_height="match_parent" android:orientation="vertical"
+			android:id="@+id/screen2_button_layout">
+			<!-- Dynamically Buttons will be added through the Screen2 activity - 
+				Food.java -->
+		</LinearLayout>
+
+	</ScrollView>
+
+</RelativeLayout>

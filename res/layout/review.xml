@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:background="@drawable/back_repeat">
+
+	<ImageView android:id="@+id/imageview" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:src="@drawable/logo" />
+
+	<TextView android:id="@+id/heading" android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:text="Share your experience"
+		android:layout_below="@id/imageview" />
+
+	<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/smiy_grid" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:numColumns="2"
+		android:verticalSpacing="10dp" android:horizontalSpacing="1dp"
+		android:columnWidth="150dp" android:stretchMode="columnWidth"
+		android:gravity="center" android:layout_below="@id/heading" />
+
+</RelativeLayout>

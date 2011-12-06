@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/back_repeat">
+
+	<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/tabhost"
+    >
+    
+    <RelativeLayout android:id="@+id/header"
+		android:orientation="horizontal" android:layout_width="match_parent"
+		android:layout_height="wrap_content" style="@style/ButtonText">
+
+
+		<ImageView android:id="@+id/imageviewr"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/logo" />
+
+		<ImageButton android:id="@+id/mobile_home_header"
+			android:layout_marginTop="2dp" android:padding="13dp"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/mobile_home_header"
+			android:layout_alignParentRight="true" android:soundEffectsEnabled="true"
+			android:onClick="startHome" />
+	</RelativeLayout>
+	
+    <ViewFlipper android:id="@+id/result" android:layout_width="fill_parent"
+		android:layout_below="@id/header" android:layout_height="wrap_content">
+	</ViewFlipper>    
+        
+    <RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <TabWidget
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@android:id/tabs"
+    android:layout_alignParentBottom="true"
+    />
+     <FrameLayout
+     android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@android:id/tabcontent"
+     >
+  
+	<!-- 	<ImageButton android:id="@+id/show_reviews"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:src="@drawable/show_reviews"
+			 />
+
+		<ImageButton android:id="@+id/directions"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:src="@drawable/suggest_directions" 
+			/>
+
+		<ImageButton android:id="@+id/call" android:layout_width="wrap_content"
+			android:src="@drawable/app_phone"
+			android:layout_height="wrap_content"
+			 />
+
+		<ImageButton android:id="@+id/share" android:src="@drawable/share"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			/>-->
+     </FrameLayout>
+    </RelativeLayout>
+    </TabHost>
+    </RelativeLayout>
+
+

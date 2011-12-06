@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.playcez" android:versionCode="2" android:versionName="0.2">
+	<uses-sdk android:minSdkVersion="8" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		<uses-library android:name="com.google.android.maps" />
+		<activity android:name="PlaycezSplash">
+				<intent-filter>
+					<action android:name="android.intent.action.MAIN"
+						android:screenOrientation="landscape" />
+					<category android:name="android.intent.category.LAUNCHER" />
+				</intent-filter>
+		</activity>
+		<activity android:name=".Json_Fetch"/>
+		<activity android:name=".SuggestionResults"/>		
+		<activity android:name=".Food"/>
+		<activity android:name=".QuickBite"/>
+		<activity android:name=".Tips"/>
+		<activity android:name="Result"/>
+		<activity android:name=".Accelerometer"
+			android:windowSoftInputMode="stateHidden"/>
+		<activity android:name=".AddSmallTip"
+			android:windowSoftInputMode="stateVisible"/>
+		<activity android:name=".ReviewBySmily"/>
+		<activity android:name=".FacebookSSO"/>
+		<activity android:name=".NearByPlaces"/>
+		<activity android:name=".Maps"/>
+		<activity android:name=".Start_Menu"  android:windowSoftInputMode="stateUnchanged"/>
+		<activity android:name=".ChangeLocation"/>
+		<activity android:name=".PlaycezFacebook"/>
+		<activity android:name=".Tutorial1"/>
+		<activity android:name=".NearFood"/>
+		<activity android:name=".Review"/>
+	</application>
+</manifest>

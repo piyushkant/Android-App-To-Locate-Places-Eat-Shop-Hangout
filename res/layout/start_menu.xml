@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/back_repeat">
+		
+	<AutoCompleteTextView android:id="@+id/suggestions_list" 
+		android:layout_width="match_parent" android:layout_height="55dip"
+		android:layout_marginLeft="0dp" android:hint="Search for Cafes, Pubs, Mobiles etc."
+		 android:layout_marginTop="0px" android:inputType ="text"
+		android:shadowDx="30" android:shadowDy="40" android:shadowColor="#666666" />
+	
+	<RelativeLayout android:id="@+id/header" android:layout_below="@id/suggestions_list"
+		android:orientation="horizontal" android:layout_width="match_parent"
+		android:layout_height="wrap_content" style="@style/ButtonText">
+
+		<ImageView android:id="@+id/imageview" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:src="@drawable/logo" />
+
+		<ImageButton android:id="@+id/nearest_places_ib" 
+			android:layout_marginTop="5dp" android:padding="13dp"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/mobile_review_header"
+			android:layout_alignParentRight="true" android:soundEffectsEnabled="true"
+			 />
+	</RelativeLayout>
+
+	<!-- <ScrollView android:id="@+id/listview" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_below="@id/suggestions_list"
+		android:layout_marginTop="10px">-->
+		
+	<LinearLayout  android:layout_width="match_parent" android:layout_below="@id/header"
+			 android:layout_height="wrap_content" 
+			android:orientation="vertical" android:id="@+id/start_menu_button_layout">	
+		
+			<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+				android:id="@+id/GridView02" 
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:numColumns="2" android:verticalSpacing="10dp"
+				android:horizontalSpacing="10dp" android:columnWidth="90dp"
+				android:stretchMode="columnWidth" android:gravity="center" />
+	</LinearLayout>
+	
+	<LinearLayout  android:layout_width="match_parent" 
+			 android:layout_height="match_parent" 
+			android:orientation="vertical" android:id="@+id/start">
+	<RelativeLayout android:id="@+id/footer" 
+		android:orientation="horizontal" android:layout_width="match_parent"
+		android:layout_height="match_parent"  >
+  	<TextView android:id="@+id/userarea" android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:textSize="15dip" 
+		android:drawableLeft="@drawable/city_location" android:padding="14dp"
+		android:layout_marginTop="5dp" android:background="#C0C0C0"
+		 android:textColor="#ffffff" android:layout_alignParentBottom="true"
+		 />
+	<Button android:id="@+id/changeButton"  android:text="Change" android:textSize="11dip"
+			android:layout_marginTop="5dp"  android:layout_height="70px" 
+			android:layout_width="100px" android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true" android:textColor="#000000" />
+	</RelativeLayout>
+	</LinearLayout>
+</RelativeLayout>

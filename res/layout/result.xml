@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/back_repeat">
+
+	<RelativeLayout android:id="@+id/header"
+		android:orientation="horizontal" android:layout_width="match_parent"
+		android:layout_height="wrap_content" style="@style/ButtonText">
+
+
+		<ImageView android:id="@+id/imageviewr"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/logo" />
+
+		<ImageButton android:id="@+id/mobile_home_header"
+			android:layout_marginTop="2dp" android:padding="13dp"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/mobile_home_header"
+			android:layout_alignParentRight="true" android:soundEffectsEnabled="true"
+			android:onClick="startHome" />
+
+	</RelativeLayout>
+
+	<ViewFlipper android:id="@+id/result1" android:layout_width="fill_parent"
+		android:layout_below="@id/header" android:layout_height="wrap_content">
+	</ViewFlipper>
+
+
+	<RelativeLayout android:id="@+id/footer"
+		android:orientation="horizontal" android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+		style="@style/footerView">
+
+
+		<ImageButton android:id="@+id/previous"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:src="@drawable/city_prev" android:layout_alignParentBottom="true" />
+
+		<ImageButton android:id="@+id/show_reviews"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:src="@drawable/show_reviews" android:layout_toRightOf="@id/previous"
+			android:layout_alignParentBottom="true" />
+
+		<ImageButton android:id="@+id/directions"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:src="@drawable/suggest_directions" android:layout_toRightOf="@id/show_reviews"
+			android:layout_alignParentBottom="true" />
+
+		<ImageButton android:id="@+id/call" android:layout_width="wrap_content"
+			android:src="@drawable/app_phone" android:layout_toRightOf="@id/directions"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true" />
+
+		<ImageButton android:id="@+id/share" android:src="@drawable/share"
+			android:layout_width="wrap_content" android:layout_toRightOf="@id/call"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true" />
+
+		<ImageButton android:id="@+id/next" android:layout_width="wrap_content"
+			android:src="@drawable/city_next" android:layout_toRightOf="@id/share"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true" />
+	</RelativeLayout>
+
+
+</RelativeLayout> 
