@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent" android:layout_height="match_parent"
+		android:background="#FFFFFF" android:orientation="vertical">
+
+		<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/head" android:layout_width="fill_parent"
+			android:layout_height="40dip" android:background="#F8F8F8"
+			android:orientation="vertical" android:paddingLeft="15dip"
+			android:paddingRight="15dip" android:paddingTop="5dip">
+
+			<ImageView android:id="@+id/topLog" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:src="@drawable/toplog" />
+		</RelativeLayout>
+
+		<EditText android:id="@+id/nameArea" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:layout_below="@id/head"
+			android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+			android:layout_marginTop="5dip" android:hint="Name*"
+			android:singleLine="true" />
+
+		<TextView android:id="@+id/addressText" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:layout_below="@id/nameArea"
+			android:layout_marginTop="10dip" android:background="#C0C0C0"
+			android:paddingLeft="5dip" android:text="Address" android:textColor="#000000"
+			android:textStyle="bold" />
+
+		<EditText android:id="@+id/addressArea" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:layout_below="@id/addressText"
+			android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+			android:layout_marginTop="4dip" android:hint="Address*" />
+
+		<EditText android:id="@+id/localityArea"
+			android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:layout_below="@id/addressArea" android:layout_marginLeft="5dip"
+			android:layout_marginRight="5dip" android:layout_marginTop="5dip"
+			android:hint="Locality*" android:paddingLeft="5dip" />
+
+		<EditText android:id="@+id/cityArea" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:layout_below="@id/localityArea"
+			android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+			android:layout_marginTop="5dip" android:hint="City*"
+			android:singleLine="true" />
+
+		<TableLayout android:id="@+id/areaTable"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_below="@id/cityArea" android:layout_marginTop="5dip">
+
+			<TableRow android:layout_marginLeft="5dip"
+				android:layout_marginRight="5dip">
+
+				<EditText android:id="@+id/stateArea" android:layout_width="0dip"
+					android:layout_height="fill_parent" android:layout_weight="1"
+					android:hint="State" android:singleLine="true" />
+
+				<EditText android:id="@+id/zipArea" android:layout_width="0dip"
+					android:layout_height="fill_parent" android:layout_weight="1"
+					android:hint="Zip Code" android:singleLine="true" />
+			</TableRow>
+		</TableLayout>
+
+		<TextView android:id="@+id/phoneText" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:layout_below="@id/areaTable"
+			android:layout_marginTop="10dip" android:background="#C0C0C0"
+			android:paddingLeft="5dip" android:text="Phone Number"
+			android:textColor="#000000" android:textStyle="bold" />
+
+		<EditText android:id="@+id/phoneArea" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:layout_below="@id/phoneText"
+			android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+			android:layout_marginTop="4dip" android:hint="Phone Number"
+			android:inputType="phone" />
+
+		<TextView android:id="@+id/categoryText"
+			android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:layout_below="@id/phoneArea" android:layout_marginTop="10dip"
+			android:background="#C0C0C0" android:paddingLeft="5dip" android:text="Category*"
+			android:textColor="#000000" android:textStyle="bold" />
+
+		<Spinner android:id="@+id/spinCat" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:layout_below="@id/categoryText"
+			android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+			android:layout_marginTop="5dip" android:background="@drawable/rdbutton"
+			android:text="*Category" android:textStyle="bold" />
+
+		<CheckBox android:id="@+id/hereBox" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_below="@id/spinCat"
+			android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+			android:layout_marginTop="10dp" android:checked="true"
+			android:text="I am at this location!" android:textColor="#000000"
+			android:textStyle="bold" />
+
+		<Button android:id="@+id/addButton" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:layout_below="@id/hereBox"
+			android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+			android:layout_marginTop="10dip" android:background="@drawable/rdbutton"
+			android:text="Add Place" android:textStyle="bold" />
+	</RelativeLayout>
+
+</ScrollView>

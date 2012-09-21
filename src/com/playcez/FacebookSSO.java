@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package com.playcez;
 
 import java.io.FileNotFoundException;
@@ -21,13 +24,27 @@ import com.facebook.android.Facebook.DialogListener;
 import com.facebook.android.FacebookError;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class FacebookSSO.
+ */
 public class FacebookSSO extends Activity{
 
+	/** The facebook. */
 	private Facebook facebook = new Facebook("7347090549");
+	
+	/** The FILENAME. */
 	private String FILENAME = "Placez_data";
+	
+	/** The m prefs. */
 	private SharedPreferences mPrefs;
+	
+	/** The m async runner. */
 	private AsyncFacebookRunner mAsyncRunner;
 	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreate(android.os.Bundle)
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -76,12 +93,18 @@ public class FacebookSSO extends Activity{
 		}		
 	}
 
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onActivityResult(int, int, android.content.Intent)
+	 */
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
 	}
 	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// TODO Auto-generated method stub
@@ -90,6 +113,9 @@ public class FacebookSSO extends Activity{
 		return true;
 	}
 
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// TODO Auto-generated method stub
@@ -109,8 +135,22 @@ public class FacebookSSO extends Activity{
 		return super.onOptionsItemSelected(item);
 	}
 
+	/**
+	 * The listener interface for receiving logoutRequest events.
+	 * The class that is interested in processing a logoutRequest
+	 * event implements this interface, and the object created
+	 * with that class is registered with a component using the
+	 * component's <code>addLogoutRequestListener<code> method. When
+	 * the logoutRequest event occurs, that object's appropriate
+	 * method is invoked.
+	 *
+	 * @see LogoutRequestEvent
+	 */
 	private class LogoutRequestListener implements RequestListener {
 
+		/**
+		 * Instantiates a new logout request listener.
+		 */
 		LogoutRequestListener(){
 			try {
 				SharedPreferences.Editor editor = mPrefs.edit();
@@ -124,28 +164,43 @@ public class FacebookSSO extends Activity{
 			} 
 		}
 		
+		/* (non-Javadoc)
+		 * @see com.facebook.android.AsyncFacebookRunner.RequestListener#onComplete(java.lang.String, java.lang.Object)
+		 */
 		public void onComplete(String response, Object state) {
 			// TODO Auto-generated method stub
 			
 		}
 
+		/* (non-Javadoc)
+		 * @see com.facebook.android.AsyncFacebookRunner.RequestListener#onIOException(java.io.IOException, java.lang.Object)
+		 */
 		public void onIOException(IOException e, Object state) {
 			// TODO Auto-generated method stub
 			
 		}
 
+		/* (non-Javadoc)
+		 * @see com.facebook.android.AsyncFacebookRunner.RequestListener#onFileNotFoundException(java.io.FileNotFoundException, java.lang.Object)
+		 */
 		public void onFileNotFoundException(FileNotFoundException e,
 				Object state) {
 			// TODO Auto-generated method stub
 			
 		}
 
+		/* (non-Javadoc)
+		 * @see com.facebook.android.AsyncFacebookRunner.RequestListener#onMalformedURLException(java.net.MalformedURLException, java.lang.Object)
+		 */
 		public void onMalformedURLException(MalformedURLException e,
 				Object state) {
 			// TODO Auto-generated method stub
 			
 		}
 
+		/* (non-Javadoc)
+		 * @see com.facebook.android.AsyncFacebookRunner.RequestListener#onFacebookError(com.facebook.android.FacebookError, java.lang.Object)
+		 */
 		public void onFacebookError(FacebookError e, Object state) {
 			// TODO Auto-generated method stub
 			

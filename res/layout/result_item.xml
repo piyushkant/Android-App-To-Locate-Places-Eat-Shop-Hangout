@@ -1,65 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="wrap_content" android:layout_height="wrap_content"
-	android:orientation="vertical" android:background="@drawable/back_repeat"
-	android:id="@+id/ll">
+    android:id="@+id/ll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_repeat"
+    android:orientation="vertical" >
 
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-		android:layout_width="wrap_content" android:layout_height="wrap_content"
-		android:orientation="horizontal" android:background="@drawable/back_repeat">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_repeat"
+        android:orientation="horizontal" >
 
-		<FrameLayout android:layout_width="wrap_content"
-			android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/header"
+            style="@style/Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
+            <FrameLayout
+                android:id="@+id/result_no_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
 
-			<ImageView android:id="@+id/result_no"
-				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/result_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-			<TextView android:id="@+id/result_text_no"
-				android:layout_width="match_parent" android:layout_height="wrap_content"
-				android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/result_text_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold" />
+            </FrameLayout>
 
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/result_no_image"
+                android:textColor="#000000"
+                android:textSize="16dip"
+                android:textStyle="bold" />
 
-		</FrameLayout>
+            <TextView
+                android:id="@+id/cross_street"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_toRightOf="@id/result_no_image"
+                android:textColor="#000000"
+                android:textSize="13dip" />
 
-		<RelativeLayout android:id="@+id/header"
-			android:orientation="vertical" android:layout_width="match_parent"
-			android:layout_height="wrap_content" style="@style/ButtonText">
+            <ImageView
+                android:id="@+id/overall_smily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/emotionless" />
+        </RelativeLayout>
 
-			<TextView android:id="@+id/name" android:layout_width="match_parent"
-				android:layout_height="wrap_content" android:textStyle="bold"
-				android:textColor="#000000" />
+        <RelativeLayout
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_margin="10dip"
+            android:orientation="vertical" >
 
-			<TextView android:id="@+id/address" android:layout_width="match_parent"
-				android:layout_height="wrap_content" android:textStyle="bold"
-				android:textColor="#000000" android:layout_below="@id/name" />
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:drawableLeft="@drawable/city_location"
+                android:drawablePadding="10dp"
+                android:textColor="#000000" />
 
-			<TextView android:id="@+id/cross_street" android:layout_width="match_parent"
-				android:layout_height="wrap_content" android:textStyle="bold"
-				android:textColor="#000000" android:layout_below="@id/address" />
+            <TextView
+                android:id="@+id/number1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address"
+                android:drawableLeft="@drawable/city_phone"
+                android:drawablePadding="10dp"
+                android:textColor="#000000" />
 
-			<ImageView android:id="@+id/map_image"
-				android:layout_width="140px" android:layout_height="140px"
-				android:layout_alignParentRight="true" android:layout_toRightOf="@id/name"
-				android:tag="Get Directions" />
+            <TextView
+                android:id="@+id/subcat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/number1"
+                android:drawableLeft="@drawable/city_tag"
+                android:drawablePadding="10dp"
+                android:textColor="#000000" />
 
-			<TextView android:id="@+id/number1" android:layout_width="wrap_content"
-				android:layout_height="wrap_content" android:textColor="#0000ff"
-				android:layout_below="@id/cross_street" android:visibility="gone" />
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subcat"
+                android:drawableLeft="@drawable/mob_directions_icon"
+                android:drawablePadding="10dp"
+                android:textColor="#000000" />
 
-			<TextView android:id="@+id/distance" android:layout_width="wrap_content"
-				android:layout_height="wrap_content" android:textColor="#000000"
-				android:layout_below="@id/number1" />
+            <TextView
+                android:id="@+id/ask_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/distance"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dip"
+                android:text="Been Here? Rate Experience!"
+                android:textColor="#000000" />
 
-		</RelativeLayout>
+            <ImageButton
+                android:id="@+id/emotionless"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@id/ask_review"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rdbutton"
+                android:src="@drawable/emotionless" />
 
-	</LinearLayout>
+            <ImageButton
+                android:id="@+id/loveit"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@id/ask_review"
+                android:layout_toLeftOf="@id/emotionless"
+                android:background="@drawable/rdbutton"
+                android:src="@drawable/loveit" />
 
-	<Button android:id="@+id/add_tip" android:layout_width="fill_parent"
-		android:textSize="18dip" android:textColor="#ffffff"
-		android:layout_height="wrap_content" android:text="Add Review"
-		style="@style/Result_Buttons" android:visibility="invisible"/>
+            <ImageButton
+                android:id="@+id/hateit"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_below="@id/ask_review"
+                android:layout_toRightOf="@id/emotionless"
+                android:background="@drawable/rdbutton"
+                android:src="@drawable/hateit" />
+        </RelativeLayout>
 
+        <RelativeLayout
+            android:id="@+id/flagLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="20dip" >
+
+            <Button
+                android:id="@+id/flagButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dip"
+                android:background="@drawable/rdbutton"
+                android:drawableLeft="@drawable/redflag"
+                android:text="Report this Place"
+                android:textColor="#666666"
+                android:textSize="13dip" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- Start of reviews -->
 
 </LinearLayout>

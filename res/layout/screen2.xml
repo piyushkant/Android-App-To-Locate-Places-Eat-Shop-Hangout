@@ -1,54 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical" android:layout_width="fill_parent"
-	android:layout_height="fill_parent" android:background="@drawable/back_repeat">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/back_repeat"
+    android:orientation="vertical" >
 
-	<RelativeLayout android:id="@+id/header"
-		android:orientation="horizontal" android:layout_width="match_parent"
-		android:layout_height="wrap_content" style="@style/ButtonText">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:background="#F8F8F8"
+        android:orientation="vertical"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="5dip" >
 
+        <ImageView
+            android:id="@+id/topLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/toplog" />
 
-		<ImageView android:id="@+id/imageview2" android:layout_width="wrap_content"
-			android:layout_height="wrap_content" android:src="@drawable/logo" />
-	
-		<ImageButton android:id="@+id/mobile_home_header"
-			android:layout_marginTop="2dp" android:padding="13dp"
-			android:layout_width="wrap_content" android:layout_height="wrap_content"
-			android:src="@drawable/mobile_home_header"
-			android:layout_alignParentRight="true" android:soundEffectsEnabled="true"
-			android:onClick="startHome" />
+        <ImageButton
+            android:id="@+id/mobile_home_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:background="@null"
+            android:onClick="startHome"
+            android:src="@drawable/home" />
 
-	</RelativeLayout>
-	
-	<Spinner
-        android:id="@+id/spinner" android:layout_below="@id/header"
-        android:layout_width="match_parent" android:text="Show All"
-        android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/add_place"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/mobile_home_header"
+            android:padding="13dp"
+            android:src="@drawable/add_button"
+            android:visibility="invisible" />
+    </RelativeLayout>
 
-	 <TextView android:layout_width="fill_parent" android:id="@+id/text"
-		android:layout_height="wrap_content" android:gravity="center"
-		android:textStyle="bold" android:textColor="#000000" android:textSize="16sp"
-		android:text="" android:layout_below="@id/header"
-		android:layout_marginTop="25px" android:layout_marginBottom="20px" />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:background="@drawable/rdbutton"
+        android:text="Show All" />
 
-	<ImageButton android:id="@+id/mobile_refresh_button" style="@style/ButtonText"
-		android:layout_marginBottom="4dp" android:padding="13dp"
-		android:layout_width="wrap_content" android:layout_height="wrap_content"
-		android:src="@drawable/mobile_refresh_button" android:layout_below="@id/header"
-		android:layout_alignParentRight="true" android:soundEffectsEnabled="true"
-		android:onClick="refresh" android:visibility="invisible" />
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminate="true"
+        android:indeterminateOnly="true"
+        android:isScrollContainer="false"
+        android:soundEffectsEnabled="false" />
 
-	<ScrollView android:id="@+id/listview2"
-		android:layout_below="@id/spinner" android:layout_width="fill_parent"
-		android:layout_height="fill_parent">
+    <EditText
+        android:id="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5px"
+        android:inputType="text"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:shadowColor="#666666"
+        android:shadowDx="30"
+        android:shadowDy="40"
+        android:visibility="gone" />
 
-		<LinearLayout android:layout_width="match_parent"
-			android:layout_height="match_parent" android:orientation="vertical"
-			android:id="@+id/screen2_button_layout">
-			<!-- Dynamically Buttons will be added through the Screen2 activity - 
-				Food.java -->
-		</LinearLayout>
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginBottom="20px"
+        android:layout_marginTop="25px"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
 
-	</ScrollView>
+    <ImageButton
+        android:id="@+id/mobile_refresh_button"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/header"
+        android:layout_marginBottom="4dp"
+        android:onClick="refresh"
+        android:padding="13dp"
+        android:soundEffectsEnabled="true"
+        android:src="@drawable/mobile_refresh_button"
+        android:visibility="invisible" />
+
+    <ScrollView
+        android:id="@+id/listview2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/filter" >
+
+        <LinearLayout
+            android:id="@+id/screen2_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!--
+                 Dynamically Buttons will be added through the Screen2 activity - 
+				Food.java
+            -->
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

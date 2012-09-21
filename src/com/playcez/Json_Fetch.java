@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package com.playcez;
 		
 import java.io.BufferedReader;
@@ -9,41 +12,58 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
+
+import android.util.Log;
 		
+		// TODO: Auto-generated Javadoc
+/**
+		 * The Class Json_Fetch.
+		 */
 		public class Json_Fetch  {
+			
+			/** The json. */
 			public static String json;
-			public Json_Fetch(String url){
+			
+			/**
+			 * Instantiates a new json_ fetch.
+			 *
+			 * @param url the url
+			 */
+			public Json_Fetch(String url, String uid, String playcez_token){
 			 try{
 		        	
-		        	//System.setProperty("http.proxyHost", android.net.Proxy.getDefaultHost());
-		        	//System.setProperty("http.proxyPort",Integer.toString(android.net.Proxy.getDefaultPort()));
-		        	//System.setProperty("http.proxyHost", "hproxy.iith.ac.in");
-		        	//System.setProperty("http.proxyPort","3128");
-		        	HttpClient httpClient = new DefaultHttpClient();
-		        	HttpContext localContext = new BasicHttpContext();
-		        	HttpGet httpGet = new HttpGet(url);
-		        	
-		        	HttpResponse response = httpClient.execute(httpGet, localContext);
-		        	String result = "";
-		        		
-		        	BufferedReader reader = new BufferedReader(
-		        		    new InputStreamReader(
-		        		      response.getEntity().getContent()
-		        		    )
-		        		  );
-		        		 
-		        	
-		        		String line = null;
-		        		while ((line = reader.readLine()) != null){
-		        		  result += line + "\n";
-		        		}
-		        	//	Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
-		        		
-		        		
-		        		this.json=result;
-		        		
-		        		
-		        //		Toast.makeText(this, "Everything Works fine till now", Toast.LENGTH_SHORT).show();
+				if(url.contains("?")){
+					url += "&uid=" + uid + "&playcez_token=" + playcez_token;
+				}else{
+					url += "?uid=" + uid + "&playcez_token=" + playcez_token;
+				}
+			 
+				Log.d("JSONFETCH", url + " this is url");
+	        	HttpClient httpClient = new DefaultHttpClient();
+	        	HttpContext localContext = new BasicHttpContext();
+	        	HttpGet httpGet = new HttpGet(url);
+	        	
+	        	HttpResponse response = httpClient.execute(httpGet, localContext);
+	        	String result = "";
+	        		
+	        	BufferedReader reader = new BufferedReader(
+	        		    new InputStreamReader(
+	        		      response.getEntity().getContent()
+	        		    )
+	        		  );
+	        		 
+	        	
+	        		String line = null;
+	        		while ((line = reader.readLine()) != null){
+	        		  result += line + "\n";
+	        		}
+	        	//	Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
+	        		
+	        		
+	        		this.json=result;
+	        		
+	        		
+	        //		Toast.makeText(this, "Everything Works fine till now", Toast.LENGTH_SHORT).show();
 		        }
 		        catch(Exception e)
 		        {

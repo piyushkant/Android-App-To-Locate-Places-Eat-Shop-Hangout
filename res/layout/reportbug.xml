@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/reportABug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C0C0C0"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/reportbug"
+        android:textColor="#000000"
+        android:textSize="22dip" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/deviceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reportABug"
+        android:layout_marginTop="20dip"
+        android:text=""
+        android:textSize="18dip" 
+        android:textColor="#000000">
+    </TextView>
+
+    <TextView
+        android:id="@+id/osVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deviceName"
+        android:text=""
+        android:textSize="18dip"
+        android:textColor="#000000" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/bugDesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/osVersion"
+        android:layout_marginTop="10dip"
+        android:text="@string/bugdescript"
+        android:textSize="18dip"
+        android:textColor="#000000" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/bugDes"
+        android:layout_width="match_parent"
+        android:layout_height="150dip"
+        android:layout_below="@id/bugDesText"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:gravity="top"
+        android:textSize="16dip" >
+    </EditText>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="120dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bugDes"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="5dip"
+        android:text="Send" >
+    </Button>
+
+</RelativeLayout>

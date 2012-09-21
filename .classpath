@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="lib" path="D:/Document/android_workspace/PlaycezAndroid/lib/andengine.jar"/>
 	<classpathentry kind="src" path="com_facebook_android2_src"/>
-	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/acra-4.2.3.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/andengine.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/google-api-client-1.5.0-beta.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/google-api-client-1.5.0-beta-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/google-api-client-extensions-android2-1.5.0-beta.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/google-api-client-extensions-android2-1.5.0-beta-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/google-http-client-1.5.0-beta.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/google-http-client-1.5.0-beta-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/google-http-client-extensions-android2-1.5.0-beta.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/google-http-client-extensions-android2-1.5.0-beta-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/google-http-client-extensions-android3-1.5.0-beta.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/google-http-client-extensions-android3-1.5.0-beta-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/google-oauth-client-1.5.0-beta.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/google-oauth-client-1.5.0-beta-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/gson-1.7.1.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/guava-r09.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/libplus.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/libplus-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/signpost-commonshttp4-1.2.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/signpost-core-1.2.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/signpost-jetty6-1.2.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Document/android_workspace/Playcez/lib/twitter4j-core-2.1.6.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

@@ -7,9 +7,28 @@
     <string name="upload">Upload Photo</string>
     <string name="post">Wall Post!</string>
     <string name="delete">Delete Post</string>
+    <string name="reportbug">Report An Issue</string>
+    <string name="bugdescript">Feedback :</string>
+    <string name="shareSubject">PlayCez, A Location Based Android App</string>
+    <string name="shareContent">Check Out http://www.playcez.com</string>
+    <string name="contactUs">info@playcez.com</string>
+    <string name="rateLink">market://details?id=com.playcez</string>
+    
+	<string name="search">Custom Tab Menu Bar Example - Search Page</string>
+	<string name="share">Custom Tab Menu Bar Example - Share Page</string>
+	<string name="website">Custom Tab Menu Bar Example - Website Page</string>
+	<string name="settings">Custom Tab Menu Bar Example - Settings Page</string>
+	<string name="quit">Exiting... Please Wait</string>
     
     <style name="ButtonText">
-    	<item name="android:gravity">center</item>
+    	<item name="android:layout_width">match_parent</item>
+    	<item name="android:textSize">30dp</item>
+    	<item name="android:typeface">serif</item>
+    	<item name="android:background">@drawable/color_gradient</item>
+	</style>	
+	
+	<style name="BtText">
+		<item name="android:gravity">center</item>
     	<item name="android:layout_width">match_parent</item>
 		<item name="android:layout_height">80dip</item>
     	<item name="android:layout_margin">3dp</item>
@@ -17,6 +36,21 @@
     	<item name="android:typeface">serif</item>
     	<item name="android:background">@drawable/color_gradient</item>
 	</style>
+	
+	<style name="HeaderInfo">
+    	<item name="android:layout_width">match_parent</item>
+    	<item name="android:textSize">30dp</item>
+    	<item name="android:typeface">serif</item>
+    	<item name="android:background">@drawable/header_info_back_repeat</item>
+	</style>
+	
+	<style name="Header">
+    	<item name="android:layout_width">match_parent</item>
+    	<item name="android:textSize">30dp</item>
+    	<item name="android:typeface">serif</item>
+    	<item name="android:background">@drawable/header_gradient</item>
+	</style>
+	
 
     <style name="Result_Buttons">
     	<item name="android:gravity">center</item>
@@ -45,5 +79,59 @@
     	<item name="android:background">@drawable/footer_gradient</item>
 	</style>
 	
+	<style name="tabsBackground">
+    <item name="android:colorBackground">#666666</item>
+	</style>
+	
+	<string name="tab_1">First</string>
+	<string name="tab_2">Second</string>
+	<string name="tab_3">Third</string>
 
+	<style name="Animations"/>
+
+	<!-- PopDownMenu -->
+	<style name="Animations.PopDownMenu"/>
+	
+	<style name="Animations.PopDownMenu.Center">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
+	</style>
+	
+	<style name="Animations.PopDownMenu.Left">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_topleft_to_bottomright</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
+	</style>
+	
+	<style name="Animations.PopDownMenu.Right">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_topright_to_bottomleft</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_bottomleft_to_topright</item>
+	</style>
+	
+	<style name="Animations.PopDownMenu.Reflect">
+		<item name="@android:windowEnterAnimation">@anim/pump_top</item>
+		<item name="@android:windowExitAnimation">@anim/disappear</item>
+	</style>
+	
+	<!-- PopUpMenu -->
+	<style name="Animations.PopUpMenu"/>
+	
+	<style name="Animations.PopUpMenu.Center">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
+	</style>
+	
+	<style name="Animations.PopUpMenu.Left">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottomleft_to_topright</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_topright_to_bottomleft</item>
+	</style>
+	
+	<style name="Animations.PopUpMenu.Right">
+		<item name="@android:windowEnterAnimation">@anim/grow_from_bottomright_to_topleft</item>
+		<item name="@android:windowExitAnimation">@anim/shrink_from_topleft_to_bottomright</item>
+	</style>
+	
+	<style name="Animations.PopUpMenu.Reflect">
+		<item name="@android:windowEnterAnimation">@anim/pump_bottom</item>
+		<item name="@android:windowExitAnimation">@anim/disappear</item>
+	</style>
 </resources>

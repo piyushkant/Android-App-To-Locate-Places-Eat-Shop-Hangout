@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <drawable name="white">#ffffff</drawable>
-    <drawable name="black">#000000</drawable>
+	<drawable name="white">#ffffff</drawable>
+	<drawable name="black">#000000</drawable>
+	<color name="app_background">#C0C0C0</color>
+	<color name="light_red">#C0C0C0</color>
+	<color name="dark_red">#C0C0C0</color>
+	<color name="text_tab_selected">#5d5d5d</color>
+	<color name="text_tab_unselected">#838183</color>
+
+	<color name="image_border_start">#808080</color>
+	<color name="image_border_end">#808080</color>
+	<color name="image_border_center">#c0c0c0</color>
+
 </resources>

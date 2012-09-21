@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ViewFlipper
+        android:id="@+id/photo_flipper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </ViewFlipper>
+
+    <RelativeLayout
+        android:id="@+id/switcherLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:layout_toRightOf="@id/photo_flipper" >
+
+        <ImageView
+            android:id="@+id/flagPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:src="@drawable/whiteflag" />
+
+        <TextView
+            android:id="@+id/sendFlagText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/flagPhoto"
+            android:layout_marginLeft="5dip"
+            android:text="Flag"
+            android:textColor="#FFFFFF"
+            android:textSize="12dip" />
+
+        <ImageView
+            android:id="@+id/switcherShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/flagPhoto"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="40dip"
+            android:src="@drawable/share" />
+
+        <TextView
+            android:id="@+id/sharePicText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/switcherShare"
+            android:layout_marginLeft="5dip"
+            android:text="Share"
+            android:textColor="#FFFFFF"
+            android:textSize="12dip" />
+    </RelativeLayout>
+
+</RelativeLayout>

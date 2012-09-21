@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_roott"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:padding="5dip"
+    android:stretchColumns="1" >
+
+    <TableRow >
+
+        <ImageView
+            android:id="@+id/facebookLogo"
+            android:src="@drawable/facebooklogo" />
+
+        <TextView
+            android:id="@+id/fbConnected"
+            android:text="" />
+
+        <Button
+            android:id="@+id/fbConnectButton"
+            android:text="Connect"
+            android:background="@drawable/rdbutton" />
+    </TableRow>
+
+    <TableRow >
+
+        <ImageView
+            android:id="@+id/twitterLogo"
+            android:src="@drawable/twitterlogo"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/twConnected"
+            android:layout_marginLeft="10dip"
+            android:text="Not Connected" />
+
+        <Button
+            android:id="@+id/twConnectButton"
+            android:text="Connect" />
+    </TableRow>
+
+</TableLayout>

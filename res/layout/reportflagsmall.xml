@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/reportText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C0C0C0"
+            android:gravity="center"
+            android:text="Report this Place"
+            android:textColor="#000000"
+            android:textSize="20dip" />
+
+        <RadioGroup
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/flagRadio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reportText"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="10dip"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Place Information is Wrong"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Outlet Closed"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Not a Good Suggestion"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/radio4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:textColor="#000000" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/flagArea"
+            android:layout_width="match_parent"
+            android:layout_height="150dip"
+            android:layout_below="@id/flagRadio"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dp"
+            android:gravity="top"
+            android:hint="Comments"
+            android:textSize="16dip" >
+        </EditText>
+
+        <Button
+            android:id="@+id/flagReportButton"
+            android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/flagArea"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rdbutton"
+            android:text="Send" />
+    </RelativeLayout>
+    </ScrollView>

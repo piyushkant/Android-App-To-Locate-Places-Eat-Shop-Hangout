@@ -1,40 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.playcez" android:versionCode="2" android:versionName="0.2">
+	package="com.playcez" android:versionCode="4" android:versionName="0.4">
 	<uses-sdk android:minSdkVersion="8" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<application android:icon="@drawable/icon" android:label="@string/app_name">
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+	<uses-permission android:name="android.permission.READ_LOGS"/>
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	<!-- Only this application can receive the messages and registration result -->
+	<permission android:name="com.playcez.permission.C2D_MESSAGE"
+		android:protectionLevel="signature" />
+	<uses-permission android:name="com.playcez.permission.C2D_MESSAGE" />
+	<!-- This app has permission to register and receive message -->
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<application android:icon="@drawable/icon" android:label="@string/app_name"
+		android:name="Crash" android:theme="@android:style/Theme.Black.NoTitleBar">
 		<uses-library android:name="com.google.android.maps" />
-		<activity android:name="PlaycezSplash">
-				<intent-filter>
-					<action android:name="android.intent.action.MAIN"
-						android:screenOrientation="landscape" />
-					<category android:name="android.intent.category.LAUNCHER" />
-				</intent-filter>
+		<activity android:name="PlaycezSplash"
+			android:theme="@android:style/Theme.Black.NoTitleBar">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"
+					android:screenOrientation="landscape" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
 		</activity>
-		<activity android:name=".Json_Fetch"/>
-		<activity android:name=".SuggestionResults"/>		
-		<activity android:name=".Food"/>
-		<activity android:name=".QuickBite"/>
-		<activity android:name=".Tips"/>
-		<activity android:name="Result"/>
+		<activity android:name=".Json_Fetch"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name=".SuggestionResults"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
 		<activity android:name=".Accelerometer"
-			android:windowSoftInputMode="stateHidden"/>
-		<activity android:name=".AddSmallTip"
-			android:windowSoftInputMode="stateVisible"/>
-		<activity android:name=".ReviewBySmily"/>
-		<activity android:name=".FacebookSSO"/>
-		<activity android:name=".NearByPlaces"/>
-		<activity android:name=".Maps"/>
-		<activity android:name=".Start_Menu"  android:windowSoftInputMode="stateUnchanged"/>
-		<activity android:name=".ChangeLocation"/>
-		<activity android:name=".PlaycezFacebook"/>
-		<activity android:name=".Tutorial1"/>
-		<activity android:name=".NearFood"/>
-		<activity android:name=".Review"/>
+			android:theme="@android:style/Theme.Black.NoTitleBar"
+			android:windowSoftInputMode="stateHidden" />
+		<activity android:name=".AddSmallTip" />
+		<activity android:name=".NearByPlaces"
+			android:theme="@android:style/Theme.Black.NoTitleBar"
+			android:windowSoftInputMode="stateHidden" />
+		<activity android:name=".Maps"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name=".Start_Menu"
+			android:theme="@android:style/Theme.Black.NoTitleBar"
+			android:windowSoftInputMode="adjustPan" />
+		<activity android:name=".ChangeLocation"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name=".PlaycezFacebook">
+			<intent-filter>
+				<action android:name="android.intent.action.CREATE_SHORTCUT" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".Tutorial1"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name="Recommendations"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name=".Review"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name=".SearchResults"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name=".ReportBug"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:label="Settings" android:name=".SettingsActivity" />
+		<activity android:name=".NearOffers"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name=".TabCheck"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name=".BottomBar"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name=".PhotoEditor2"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name="PhotoSwitcher"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name="AddPlaces"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name="Tutorial2"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name="Tutorial3"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name="OfferPage"
+			android:theme="@android:style/Theme.Black.NoTitleBar" />
+		<activity android:name="ChangeLocation"
+			android:theme="@android:style/Theme.Black.NoTitleBar"
+			android:windowSoftInputMode="adjustPan" />
+		<activity android:name="AccountListActivity" />
+		<activity android:name="GooglePlus" />
+		<activity android:name="ReportFlag" />
+		<receiver android:name=".C2DMRegistrationReceiver"
+			android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.REGISTRATION"></action>
+				<category android:name="com.playcez" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name="C2DMMessageReceiver"
+			android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE"></action>
+				<category android:name="com.playcez" />
+			</intent-filter>
+		</receiver>
 	</application>
 </manifest>

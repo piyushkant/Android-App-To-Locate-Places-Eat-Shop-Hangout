@@ -1,0 +1,283 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/head"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:background="#F8F8F8"
+            android:orientation="vertical"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="5dip" >
+
+            <ImageView
+                android:id="@+id/topLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/toplog" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/offerImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:background="#F0F0F0" />
+
+        <TextView
+            android:id="@+id/offerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/offerImage"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="15dip"
+            android:textColor="#000000"
+            android:textSize="17dip"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/rlBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/offerTitle"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dip"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/priceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dip"
+                android:text="Price"
+                android:textColor="#000000"
+                android:textSize="16dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/discountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/priceText"
+                android:text="Discount"
+                android:textColor="#000000"
+                android:textSize="16dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/savingsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dip"
+                android:layout_toRightOf="@id/discountText"
+                android:text="Savings"
+                android:textColor="#000000"
+                android:textSize="16dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/priceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/priceText"
+                android:layout_marginRight="30dip"
+                android:text="Pay"
+                android:textColor="#666666"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/discountTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/priceText"
+                android:layout_marginLeft="20dip"
+                android:layout_toRightOf="@id/priceTxt"
+                android:text="Value"
+                android:textColor="#666666"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/savingsTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/priceText"
+                android:layout_marginLeft="45dip"
+                android:layout_toRightOf="@id/discountTxt"
+                android:text="Savings"
+                android:textColor="#666666"
+                android:textSize="14dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/rlDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlBar"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dip"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/startDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dip"
+                android:textSize="12dip" />
+
+            <TextView
+                android:id="@+id/expiryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_toRightOf="@id/startDate"
+                android:textSize="12dip" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/emailButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlDate"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/rdbutton"
+            android:text="Send Deal to my Email!"
+            android:textColor="#000000"
+            android:textSize="20dip" />
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/offerShareBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailButton"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="5dip"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/offerBanner"
+                android:layout_width="140dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="30dip"
+                android:layout_marginTop="0dip"
+                android:maxWidth="70dip" />
+
+            <ImageView
+                android:id="@+id/fbOfferShare"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dip"
+                android:layout_toRightOf="@id/offerBanner"
+                android:src="@drawable/facebooklogo" />
+
+            <ImageView
+                android:id="@+id/twOfferShare"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dip"
+                android:layout_toRightOf="@id/fbOfferShare"
+                android:src="@drawable/twitterlogo" />
+
+            <ImageView
+                android:id="@+id/offerLocator"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/twOfferShare"
+                android:src="@drawable/offerlocator" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/enterEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/offerShareBar"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/provideEmailText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:text="Please provide your Email Address."
+                android:textColor="#FF0000"
+                android:textSize="15dip" />
+
+            <EditText
+                android:id="@+id/provideEmailArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/provideEmailText"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:hint="Enter Your Email Id" />
+
+            <Button
+                android:id="@+id/provideEmailButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/provideEmailArea"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/rdbutton"
+                android:text="Send Deal to my Email!"
+                android:textColor="#000000"
+                android:textSize="20dip" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/stLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/enterEmail"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="25dip"
+            android:background="#C0C0C0" />
+
+        <TextView
+            android:id="@+id/addressText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stLine"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="10dip"
+            android:textColor="#C0C0C0"
+            android:textSize="14dip" />
+    </RelativeLayout>
+
+</ScrollView>
